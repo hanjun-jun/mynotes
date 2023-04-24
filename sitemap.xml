@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hanjun-jun.github.com/mynotes/tags/index.html</loc>
+    
+    <lastmod>2023-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hanjun-jun.github.com/mynotes/diary/index.html</loc>
+    
+    <lastmod>2023-04-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://hanjun-jun.github.com/mynotes/posts/16107.html</loc>
     
     <lastmod>2023-04-24</lastmod>
@@ -23,24 +41,6 @@
     <loc>http://hanjun-jun.github.com/mynotes/categories/index.html</loc>
     
     <lastmod>2023-04-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hanjun-jun.github.com/mynotes/tags/index.html</loc>
-    
-    <lastmod>2023-04-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://hanjun-jun.github.com/mynotes/diary/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
