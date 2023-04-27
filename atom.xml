@@ -6,7 +6,7 @@
   <link href="http://hanjun-jun.github.com/mynotes/atom.xml" rel="self"/>
   
   <link href="http://hanjun-jun.github.com/mynotes/"/>
-  <updated>2023-04-24T15:00:53.872Z</updated>
+  <updated>2023-04-27T14:34:36.953Z</updated>
   <id>http://hanjun-jun.github.com/mynotes/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>变量和基本类型</title>
     <link href="http://hanjun-jun.github.com/mynotes/posts/16107.html"/>
     <id>http://hanjun-jun.github.com/mynotes/posts/16107.html</id>
+    <published>2023-04-27T14:14:31.808Z</published>
+    <updated>2023-04-27T14:34:36.953Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\mynotes\assets\css\APlayer.min.css"><script src="\mynotes\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="变量和基本类型"><a href="#变量和基本类型" class="headerlink" title="变量和基本类型"></a>变量和基本类型</h1><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ol><li>不同机器占用字节数<br><img src="https://gitee.com/digua_ge/images/raw/master/data_type_bytes.png"><br>指针表示的是地址，因此在32位机器上，地址为32位，指针也为32位，即4个字节</li></ol><h2 id="const-限定符"><a href="#const-限定符" class="headerlink" title="const 限定符"></a>const 限定符</h2><h3 id="1-指针和const"><a href="#1-指针和const" class="headerlink" title="1.指针和const"></a>1.指针和const</h3><h4 id="a-指向常量的指针"><a href="#a-指向常量的指针" class="headerlink" title="a.指向常量的指针"></a>a.指向常量的指针</h4><p>格式为：const int *pi=&p;可以指向常量也可以指向一个普通变量，指针指向的变量可以改变，但是指向普通变量时也不能通过该指针修改该变量的值</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*指向常量的指针*/</span></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> pi = <span class="number">3.14</span>;</span><br><span class="line"><span class="comment">//double *ptr = &amp;pi;错误，ptr是一个普通指针，不能指向一个常量</span></span><br><span class="line"><span class="comment">//指向常量的指针，指针指向的地址可以改变，也可以指向一个普通变量，但指针的值不能改变，因为他是一个常量</span></span><br><span class="line"><span class="type">const</span> <span class="type">double</span> *cptr = &amp;pi;</span><br><span class="line"><span class="comment">//*cptr = 45;错误，cptr指向的是一个常量，不能改变值</span></span><br><span class="line"><span class="type">double</span> dval = <span class="number">3.14</span>;</span><br><span class="line">cptr = &amp;dval;<span class="comment">//可以指向普通变量，但不能通过指针改变他的值</span></span><br></pre></td></tr></table></figure><h4 id="b-常量指针"><a href="#b-常量指针" class="headerlink" title="b.常量指针"></a>b.常量指针</h4><p>格式为：int *const pi=&p;常量指针必须初始化，一但初始化，指向的地址就不能改变</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*常量的指针*/</span></span><br><span class="line"><span class="type">int</span> q = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//必须初始化，只能指向普通变量，一但初始化就不能改变指向的地址</span></span><br><span class="line"><span class="type">int</span> *<span class="type">const</span> qi = &amp;q;</span><br><span class="line">*qi = <span class="number">45</span>;</span><br><span class="line">std::cout &lt;&lt; *qi&lt;&lt;q&lt;&lt;std::endl;<span class="comment">//均为45</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*指向常量对象的常量指针*/</span></span><br><span class="line"><span class="comment">//也可以指向普通变量，必须初始化，且指向地址不能修改，而且指向的值也不能修改</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> f = <span class="number">12</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *<span class="type">const</span> qiq = &amp;f;</span><br></pre></td></tr></table></figure><p>技巧：const后面的不能改变<br>const int a;与int const a;等价</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;mynotes&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;mynotes&#92;assets&#92;js&#92;APl</summary>
+      
+    
+    
+    
+    <category term="C++基础" scheme="http://hanjun-jun.github.com/mynotes/categories/C-%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="C++基础" scheme="http://hanjun-jun.github.com/mynotes/tags/C-%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://hanjun-jun.github.com/mynotes/posts/16108.html"/>
+    <id>http://hanjun-jun.github.com/mynotes/posts/16108.html</id>
     <published>2023-04-20T14:14:24.070Z</published>
-    <updated>2023-04-24T15:00:53.872Z</updated>
+    <updated>2023-04-27T14:31:07.833Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\mynotes\assets\css\APlayer.min.css"><script src="\mynotes\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -33,6 +57,10 @@
     
     
     
+    <category term="blog" scheme="http://hanjun-jun.github.com/mynotes/categories/blog/"/>
+    
+    
+    <category term="Markdown" scheme="http://hanjun-jun.github.com/mynotes/tags/Markdown/"/>
     
   </entry>
   
